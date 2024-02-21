@@ -1,16 +1,16 @@
 # KimiaFarmaAnalytics
 
-## Deskripsi Proyek
-Proyek ini bertujuan untuk melakukan analisis data penjualan produk di perusahaan Kimia Farma. Data yang digunakan meliputi data transaksi, data produk, dan data kantor cabang Kimia Farma. Analisis ini bertujuan untuk memberikan wawasan tentang performa penjualan, keuntungan, dan penilaian pelanggan terhadap cabang-cabang Kimia Farma.
+## Project Description
+This project aims to perform data analysis on product sales at Kimia Farma company. The data used includes transaction data, product data, and data on Kimia Farma branch offices. The analysis aims to provide insights into sales performance, profitability, and customer ratings of Kimia Farma branches.
 
-## Penggunaan Query
-Query yang disediakan digunakan untuk menghasilkan data analisis penjualan produk Kimia Farma. Query ini mengambil data dari tiga tabel utama: `kf_final_transaction`, `kf_kantor_cabang`, dan `kf_product`. Query tersebut menggabungkan tabel-tabel tersebut menggunakan kolom-kolom yang sesuai seperti `transaction_id`, `branch_id`, dan `product_id`. Selain itu, dalam query ini terdapat subquery (CTE) yang digunakan untuk menghitung kolom tambahan seperti `persentase_gross_laba` dan `nett_sales`.
+## Query Usage
+The provided query is used to generate data analysis of Kimia Farma product sales. This query retrieves data from three main tables: `kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`. The query combines these tables using appropriate columns such as `transaction_id`, `branch_id`, and `product_id`. Additionally, the query includes subqueries (CTEs) used to calculate additional columns such as `persentase_gross_laba` and `nett_sales`.
 
-## Langkah-langkah Penggunaan
-1. Jalankan query di BigQuery atau platform yang mendukung SQL.
-2. Pastikan bahwa tabel-tabel yang diperlukan (`kf_final_transaction`, `kf_kantor_cabang`, dan `kf_product`) sudah tersedia dalam database yang dituju.
-3. Amati hasil query untuk mendapatkan data analisis penjualan produk Kimia Farma.
+## Usage Steps
+1. Execute the query in BigQuery or any SQL-supported platform.
+2. Ensure that the required tables (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`) are available in the target database.
+3. Examine the query results to obtain data analysis of Kimia Farma product sales.
 
-## Keterangan Tambahan
-- Query ini dapat dijalankan di BigQuery tanpa perlu modifikasi tambahan.
-- Hasil query akan memberikan data yang sudah diolah untuk analisis lebih lanjut terkait penjualan produk di Kimia Farma.
+## Additional Notes
+- This query can be executed in BigQuery without requiring additional modifications.
+- The query results will provide processed data for further analysis related to product sales at Kimia Farma.
