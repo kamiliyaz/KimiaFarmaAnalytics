@@ -36,7 +36,8 @@ SELECT
   cc.nett_sales,
   -- Calculating nett_profit and rounding it so the profit is not decimals
   CAST(cc.nett_sales * cc.persentase_gross_laba AS INT64) AS nett_profit,
-  t.rating AS rating_transaksi
+  t.rating AS rating_transaksi,
+  i.opname_stock,
 -- Selecting input columns from kf_final_transaction table (initial t)
 FROM `kimia_farma.kf_final_transaction` AS t
 -- Performing left join between table t and k(kf_kantor_cabang) with the same branch_id connector
@@ -44,4 +45,5 @@ LEFT JOIN calculated_columns AS cc ON t.transaction_id = cc.transaction_id
 -- Performing left join between table t and p (kf_product) with the same product_id connector
 LEFT JOIN `kimia_farma.kf_kantor_cabang` AS k ON t.branch_id = k.branch_id
 -- Performing left join between table t and p (kf_product) with the same product_id connector
-LEFT JOIN `kimia_farma.kf_product` AS p ON t.product_id = p.product_id;
+LEFT JOIN `kimia_farma.kf_product` AS p ON t.product_id = p.product_id
+LEFT JOIN `kimia_farma.kf_inventory` AS i ON t.product_id = i.product_id;
